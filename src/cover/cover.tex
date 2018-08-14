@@ -1,9 +1,14 @@
 \documentclass[
-  spinewidth=1.375in
+  coverheight=9.861in,
+  spinewidth=1.375in,
+  bleedwidth=0.306in,
+  11pt,
+  trimmed
 ]{bookcover}
 
 \usepackage{lettrine}
 \usepackage{fancybox}
+\usepackage{wrapfig}
 \usepackage[T1]{fontenc}
 \usepackage{Alegreya} %% Option 'black' gives heavier bold face 
 
@@ -19,10 +24,10 @@
   \bookcovercomponent{color}{bg whole}{color=FrontPageColor}
   \bookcovercomponent{color}{spine}{color=SpineBackColor}
   \bookcovercomponent{normal}{front}{
-  \vspace{2cm}
+  \vspace{2.5cm}
   \begin{center}
     \fontsize{40pt}{7em}\selectfont\bfseries
-        Category Theory \\for Programmers
+        CATEGORY THEORY \\FOR PROGRAMMERS
     \vfil
     \hspace*{-1cm}\includegraphics[width=8cm]{./piggie.png}%
     \vfil
@@ -35,7 +40,10 @@
     \rotatebox[origin=c]{-90}{\color{SpineFontColor}\bfseries\Huge Category Theory for Programmers \hspace{2em} Bartosz Milewski}}
   \bookcovercomponent{normal}{back}{
     \centering
-    \vspace{15mm}
+    \vspace{1mm}
+    \begin{figure}[H]
+      \includegraphics[width=120mm]{bunnies.png}
+    \end{figure}
     \parbox{130mm}{\color{black}
       \Large
       \lettrine[lhang=0.17]{C}{ategory Theory}
@@ -46,7 +54,11 @@
       to anybody with some experience in programming. \\
       
       That's because, just like programming,
-      category theory is about structure. Mathematicians discover structure in mathematical theories, programmers discover structure in computer programs. Well structured programs are easier to understand and maintain, and are less likely to contain bugs. Category theory provides the language to talk about structure, and learning it will make you a better programmer.
+      category theory is about structure. Mathematicians discover structure in mathematical
+      theories, programmers discover structure in computer programs. Well structured programs
+      are easier to understand and maintain, and are less likely to contain bugs. Category
+      theory provides the language to talk about structure, and learning it will make you
+      a better programmer.
     \rule{130mm}{0.4pt}
     \begin{tabular}[h]{p{3.6cm} p{10cm}}
       \vspace{0pt}
@@ -74,14 +86,7 @@
       \break
       Edited by Igal Tabachnik
       \end{minipage}
-    \end{tabular}
-    }
-    \begin{figure}[H]
-      \centering
-      \raisebox{-1cm}[3cm]{\includegraphics[width=110mm]{bunnies.png}}
-    \end{figure}
-    
-  }
+    \end{tabular}}}
   
 \end{bookcover}
 \end{document}
